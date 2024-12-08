@@ -1,0 +1,128 @@
+
+.box{
+    width: 30%;
+    height: 100vh;
+    padding-top: 30px;
+    padding-left: 30px;
+    background-color: rgba(255, 255, 255,0);
+    border: 10px solid rgba(255, 255, 255,0 );
+    display: flex;
+    float: right;
+    color: black;
+    font-size: large;
+    backdrop-filter: blur(17px);
+    flex-direction:column;
+    overflow-y: auto;
+}
+
+.innerBox{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction:row;
+    justify-content:first baseline;
+    align-items:first baseline;
+    align-content:first baseline;
+    color: black;
+    font-size: large;
+}
+
+.innerBox::after{
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 2px;
+        background-color: #ccc;
+        transition: background-color 0.3s ease, transform 0.3s ease;
+        transform: scaleX(0);
+        transform-origin: left;
+      }
+
+.innerBox2{
+    margin-top: 5%;
+    /* font-family: 'Roboto', sans-serif; */
+    font-family: 'Merriweather', serif;
+    font-size: x-large;
+    color: white;
+}
+
+.innerBox2 h1{
+    font-size: 5rem;
+    margin-left: 0;
+}
+
+  input {
+    border: none;
+    outline: none;
+    width: 80%;
+    padding: 0.5rem 0;
+    font-size: 1rem;
+    color: white;
+    background: transparent;
+    border-bottom: 1px solid whitesmoke;;
+  }
+
+.input::after{
+    outline: none;
+}
+
+input::placeholder {
+    color: #aaa; /* Light gray placeholder */
+    font-style: italic;
+  }
+
+button {
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(5px);
+    border-radius: 10px;
+    color: white;
+    font-size: 1.2rem;
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+  }
+  button:hover {
+    background: rgba(255, 255, 255, 0.4);
+    transform: scale(1.1);
+  }
+
+
+  .box::-webkit-scrollbar {
+    width: 12px; /* Width of the scrollbar */
+    height: 12px; /* Height of the horizontal scrollbar */
+}
+
+/* Styling the scrollbar track */
+.box::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.1); /* Light track background */
+    border-radius: 10px; /* Rounded corners */
+}
+
+/* Styling the scrollbar thumb (the draggable part) */
+.box::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.3); /* Dark thumb color */
+    border-radius: 10px; /* Rounded corners */
+    border: 3px solid rgba(255, 255, 255, 0.2); /* Border around the thumb for contrast */
+}
+
+/* Thumb hover effect */
+.box::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(0, 0, 0, 0.5); /* Darker thumb on hover */
+}
+
+/* Optional: Add a custom style for the scrollbar on the horizontal axis */
+.box::-webkit-scrollbar-horizontal {
+    height: 10px; /* Horizontal scrollbar height */
+}
+
+.box::-webkit-scrollbar-track-horizontal {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.box::-webkit-scrollbar-thumb-horizontal {
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+}
